@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mapa con OpenStreetMap</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+      /* Estilos CSS para el div contenedor del mapa */
+      #mapid {
+        height: 550px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mapid"></div>
+    <script>
+var centro = [-3.957766, -79.217195];
+
+// Crear el objeto mapa y asignarlo al div contenedor
+var mymap = L.map('mapid').setView(centro, 15);
+
+// Añadir una capa de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    maxZoom: 18
+}).addTo(mymap);
+
+// Obtenemos la posición actual del usuario y centramos el mapa en esa posición
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var latitud = position.coords.latitude;
+        var longitud = position.coords.longitude;
+        mymap.setView([latitud, longitud], 13);
+        L.marker([latitud, longitud]).addTo(mymap);
+    });
+}
+    </script>
+  </body>
+</html>

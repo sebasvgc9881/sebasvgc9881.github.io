@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NÓRDICO</title>
+	<script src="../JS/efectosProyecto.js"></script>
+	<link rel="icon" type="image/png" href="../img/icono-proyecto.png">
+	<style>
+        @import url('https://fonts.cdnfonts.com/css/elder-futhark');
+        @import url('https://fonts.cdnfonts.com/css/sf-comic-script');
+        body {
+			background-color: #f2f2f2;
+			margin: 0;
+			padding: 0;
+			font-family: 'Elder Futhark', sans-serif;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+			margin-top: 50px;
+		}
+		img {
+			display: flex;
+			margin: 0 auto;
+			max-width: 100%;
+			height: auto;
+			margin-top: 45px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+		}
+		p {
+			text-align:center;
+			font-size: 21px;
+			color: #666;
+			margin-top: 50px;
+			margin: 50px 0;
+		}
+		h2{
+			font-size: 35px;
+		}
+		header {
+			background: linear-gradient(45deg,#272e33,#062f71);
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+		}
+
+		footer{
+			background: linear-gradient(45deg,#272e33,#12479c);
+			color: #fff;
+		}
+
+		footer p{
+			color: #f2f2f2;
+		}
+
+		section{
+			font-family: 'SF Comic Script', sans-serif;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		.logo {
+		font-size: 45px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		}
+
+		.logo:hover{
+			font-family: 'SF Comic Script', sans-serif;
+			transition-duration: 1s;
+			font-size: 43px;
+		}
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav li {
+		list-style: none;
+		margin: 10px 0;
+	}
+
+	.nav li a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 25px;
+        font-family: 'SF Comic Script', sans-serif;		
+	}
+
+	.nav li a:hover{
+		color:gainsboro;
+	}
+
+		.carousel {
+		display: flex;
+		overflow: hidden;
+		}
+
+		.slide {
+		flex: 1 0 100%;
+		transition: transform 0.5s ease-in-out;
+		}
+
+		.slide img {
+		width: 700px;
+		height: auto;
+		}
+
+		.prev, .next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 10px;
+		background-color: #fff;
+		border: none;
+		cursor: pointer;
+		}
+
+		.prev {
+		left: 0;
+		}
+
+		.next {
+		right: 0;
+		}
+
+
+    @media (min-width: 768px){
+		header {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.nav {
+			flex-direction: row;
+		}
+
+		.nav li {
+			margin: 0 20px;
+		}
+
+		img {
+			width: 50%;
+			max-width: 500px;
+		}
+    }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">SAGA NORDICA</div>
+		<nav>
+			<ul class="nav">
+				<li><a href="../paginas/index.html">BANDOS</a></li>
+				<li><a href="#seccion_1">INICIO</a></li>
+				<li><a href="#seccion_2">PERSONAJES</a></li>
+				<li><a href="#seccion_3">TÍTULOS</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="section" id="seccion_1">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6">
+				<img src="../img/gow-ragnarok-carrusel-2.jpg" alt="Personajes GOW Nórdico">		  
+			<div class="col-md-6">
+			  <h2>Midgard te espera...</h2>
+			  <p style="margin-right: 40px; margin-left: 40px">Kratos ha dejado atrás su vida como dios de la guerra griego y se ha establecido en Midgard, el mundo nórdico. 
+				Allí, vive con su hijo Atreus y se embarcan en un viaje para cumplir el deseo de la difunta madre de Atreus de esparcir sus cenizas en la cima más alta de los Nueve Reinos.
+
+				A lo largo de su viaje, Kratos y Atreus se enfrentan a diversos enemigos, incluyendo dioses nórdicos y criaturas mitológicas. 
+				Kratos también lucha contra su pasado y su relación con Atreus, quien descubre que es en realidad parte dios y parte gigante.</p>			
+			</div>
+		  </div>
+		</section>
+		  <section id="seccion_2">
+		  <div class="row">
+			<div class="col-md-6">
+				<div class="carousel">
+					<div class="slide">
+						<img src="../img/God_of_War_2018_carrusel.png" alt="Personajes GOW Nórdico">
+					</div>
+					<div class="slide">
+						<img src="../img/personajes-GOW-Nordico.png" alt="Personajes GOW Nórdico">
+					</div>
+					<div class="slide">
+						<img src="../img/gow-ragnarok-carrusel-4.jpg" alt="Personajes GOW Nórdico">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+			  <h2>Conoce a sus personajes...</h2>
+			  <p style="margin-right: 40px; margin-left: 40px">Kratos: Es el protagonista del juego y el personaje principal de toda la serie God of War. Es un dios espartano de la guerra y en esta entrega vive en Midgard, la tierra de los mortales nórdicos, y está acompañado por su hijo Atreus. Kratos se ha convertido en un personaje más maduro y reflexivo, y trata de mantener bajo control su ira y su pasado violento mientras intenta enseñar a su hijo los valores de la bondad y la justicia.
+
+				<br>Atreus: Es el hijo de Kratos y una de las principales adiciones al juego. Al principio del juego, Atreus es un niño solitario y asustadizo, pero a medida que avanza la historia se convierte en un valiente guerrero y en un apoyo fundamental para su padre. Atreus también tiene habilidades mágicas y es capaz de comunicarse con los dioses nórdicos.
+				
+				<br>Baldur: Es el principal antagonista del juego. Es un dios nórdico de la luz que busca venganza contra Kratos por haberle impedido sentir dolor, lo que le ha hecho perder la capacidad de sentir cualquier tipo de emoción. Baldur es un guerrero formidable y un desafío constante para Kratos y Atreus.
+				
+				<br>Freya: Es una diosa nórdica de la fertilidad y la madre de Baldur. Freya ayuda a Kratos y Atreus en varias ocasiones durante el juego, pero también se convierte en un obstáculo cuando intenta proteger a su hijo.</p>
+			</div>
+		  </div>
+		</section>
+		  <section id="seccion_3">
+		  <div class="row">
+			<div class="col-md-6">
+				<img src="../img/Portada_God_of_War_Ragnarok.png" style="width: 350px;" alt="Personajes GOW Nórdico">
+			</div>
+			<div class="col-md-6">
+			  <h2><br>Títulos disponibles</h2>
+			  <p style="margin-right: 40px; margin-left: 40px">El primer juego de la saga nórdica, "God of War" (2018), sigue a Kratos y Atreus en su misión para esparcir las cenizas de la esposa de Kratos en la cima de la montaña más alta de los Nueve Reinos. Durante su viaje, se enfrentan a numerosos enemigos y descubren la verdad sobre el origen divino de Atreus.
+				<br>En "God of War: Ragnarok" (próximo lanzamiento en 2022), Kratos y Atreus se preparan para la llegada del Ragnarok, un evento cataclísmico que resultará en la destrucción del mundo. En este juego, se unirán a varios personajes de la mitología nórdica y enfrentarán peligros aún mayores para proteger a los Nueve Reinos.</p>
+			</div>
+		  </div>
+		</div>
+	</section>
+	  <footer>
+		<div class="container">
+		  <p style="font-family: 'SF Comic Script', sans-serif;">© 2023 Sebitas González | Todos los derechos reservados.</p>
+		</div>
+	  </footer>
+</body>
+</html>

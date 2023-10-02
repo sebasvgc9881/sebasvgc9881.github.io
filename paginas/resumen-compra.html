@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumen de compra</title>
+  <!-- Agregar aquí los enlaces a los archivos CSS -->
+</head>
+<body>
+  <h1>Resumen de compra</h1>
+  <div id="resumen"></div>
+  <button id="generar-pdf">Generar PDF</button>
+  <!-- Agregar aquí los enlaces a los archivos JS -->
+  <script>
+    // Obtener el botón "Generar PDF"
+const btnGenerarPDF = document.getElementById('generar-pdf');
+
+// Agregar un evento "click" al botón "Generar PDF"
+btnGenerarPDF.addEventListener('click', () => {
+  // Crear un nuevo objeto jsPDF
+  const pdf = new jsPDF();
+
+  // Obtener el contenido del resumen de la compra
+  const resumen = document.getElementById('resumen').innerText;
+
+  // Agregar el resumen de la compra al PDF
+  pdf.text(resumen, 10, 10);
+
+  // Descargar el PDF
+  pdf.save('factura.pdf');
+});
+
+  </script>
+</body>
+</html>

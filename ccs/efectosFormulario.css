@@ -1,0 +1,173 @@
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 768px) {
+  /* Ajuste de anchura y posición de etiquetas */
+  label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  /* Ajuste de anchura de campos de entrada */
+  input[type=text], input[type=email], input[type=tel], input[type=date], textarea {
+    width: 300px;
+  }
+
+  /* Ajuste de posición de campos de entrada */
+  input[type=text], input[type=email], input[type=tel], input[type=date], textarea, select {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  /* Ajuste de posición de botones */
+  input[type=submit], input[type=reset] {
+    margin-top: 20px;
+    margin-left: 170px;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 767px) {
+  /* Ajuste de anchura y posición de etiquetas */
+  label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-right: 0px;
+  }
+
+  /* Ajuste de anchura de campos de entrada */
+  input[type=text], input[type=email], input[type=tel], input[type=date], textarea {
+    width: 100%;
+  }
+
+  /* Ajuste de posición de campos de entrada */
+  input[type=text], input[type=email], input[type=tel], input[type=date], textarea, select {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Ajuste de posición de botones */
+  input[type=submit], input[type=reset] {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+}
+
+/* Estilos para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #f8f8f8;
+}
+
+/* Estilos para los títulos de sección */
+form h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilos para los campos de texto */
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Estilos para los botones */
+input[type="submit"],
+input[type="reset"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="reset"] {
+  margin-left: 20px;
+  background-color: #f44336;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Estilos para los checkboxes y radios */
+label.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Estilos para el campo de comentarios */
+label[for="comentarios"] {
+  margin-top: 10px;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Estilos para la sección de mensajes de confirmación */
+.confirmation-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de Compra</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Incluimos los archivos de Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../JS/formulario.js"></script>
+	<style>
+		/* Agregamos estilos personalizados */
+		.form-group label {
+			font-weight: bold;
+		}
+		body{
+  			background: linear-gradient(to bottom, rgb(0, 237, 0), rgb(16, 123, 0));
+			margin-bottom: 15px;
+		}
+		h1 {
+			font-size: 3em;
+			font-weight: bold;
+			text-align: center;
+			background-color: white;
+			padding: 20px;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container mt-5">
+		<h1 class="text-center">Formulario de Compra</h1>
+		<p class="text-center">Por favor completa los siguientes campos para continuar con tu compra, y participar en una trivia:</p>
+		<form>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label for="nombre">Nombre:</label>
+					<input type="text" class="form-control" id="nombre" name="nombre" required>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="apellido">Apellido:</label>
+					<input type="text" class="form-control" id="apellido" name="apellido" required>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="email">Email:</label>
+					<input type="email" class="form-control" id="email" name="email" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="telefono">Teléfono:</label>
+					<input type="tel" class="form-control" id="telefono" name="telefono" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="direccion">Dirección:</label>
+					<input type="text" class="form-control" id="direccion" name="direccion" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label for="ciudad">Ciudad:</label>
+					<input type="text" class="form-control" id="ciudad" name="ciudad" required>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="estado">Estado:</label>
+					<input type="text" class="form-control" id="estado" name="estado" required>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="pais">País:</label>
+					<input type="text" class="form-control" id="pais" name="pais" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label for="codigo-postal">Código Postal:</label>
+					<input type="text" class="form-control" id="codigo-postal" name="codigo-postal" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="edad">Edad:</label>
+                    <input type="number" class="form-control" id="edad" name="edad" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="genero">Género:</label>
+                    <select class="form-control" id="genero" name="genero" required>
+                    <option value="">Selecciona una opción</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="No binario">Género Imaginario</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ocupacion">Ocupación:</label>
+                    <input type="text" class="form-control" id="ocupacion" name="ocupacion" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="interes">Áreas de interés:</label>
+                    <input type="text" class="form-control" id="interes" name="interes" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ocupacion">Hobbies:</label>
+                    <input type="text" class="form-control" id="hobbies" name="hobbies" required>
+            </div>
+                <div class="form-group col-md-6">
+                    <label for="genero">Nivel de Estudios:</label>
+                    <select class="form-control" id="estudios" name="estudios" required>
+                    <option value="">Selecciona una opción</option>
+                        <option value="Bachiller">Bachiller</option>
+                        <option value="Grado">Grado</option>
+                        <option value="Posgrado">Posgrado</option>
+                    </select>
+                </div>
+            </div>
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-primary">Borrar Todo</button>
+            </div>
+            
+        </form>
+    </div>     
+</body>
+</html>

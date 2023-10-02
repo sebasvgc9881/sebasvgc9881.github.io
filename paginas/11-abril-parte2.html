@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo de API de Chuck Norris</title>
+	<meta name="color-scheme" content="dark" charset="UTF-8">
+	<style>
+		body{
+			background-size: cover;
+			text-align: center;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+		#imagen img {
+		  max-width: 350px;
+		  max-height: 350px;
+		}
+		#btn, button {
+			background-color: #4CAF50; /* Fondo verde */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			transition-duration: 0.4s;
+  			transition-timing-function: ease-out;
+ 			transition-delay: 0s;
+		}
+		#btn, button:hover {
+  			background-color: #3e8e41; /* Cambia el fondo a un verde más oscuro */
+		}
+	  </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>Obtener una broma de Chuck Norris</h1>
+	<button id="btn">Obtener broma</button>
+	<p id="joke"></p>
+	<br><br><br><br>
+	<div id="imagen">
+		<img src="" alt="Imagen aleatoria">
+	  </div>
+	  <button id="obtener-imagen-btn" class="btn btn-primary">Obtener imagen</button>
+	  <br><br><br><br>
+	  <h1>Obtener Clima</h1>
+		<form id="weather-form">
+		<label for="city-input">City:</label>
+		<input type="text" id="city-input" name="city">
+		<button type="submit">Obtener clima</button>
+		</form>
+    <div id="weather-result"></div>
+	<script src="../JS/11-Abril-2.js"></script>
+</body>
+</html>

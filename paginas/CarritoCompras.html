@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+  <header>
+    <h1>Carrito de Compras</h1>
+    <button id="boton-carrito">Ver carrito</button>
+  </header>
+  <main>
+    <section id="productos">
+      <h2>Productos</h2>
+      <ul>
+        <li>
+          <h3>Pantalones</h3>
+          <p>Pantalón de mezclilla</p>
+          <p>Precio: $50</p>
+          <button class="boton-comprar" data-id="pantalon">Comprar</button>
+        </li>
+        <li>
+          <h3>Zapatos</h3>
+          <p>Zapatos deportivos</p>
+          <p>Precio: $80</p>
+          <button class="boton-comprar" data-id="zapatos">Comprar</button>
+        </li>
+        <li>
+          <h3>Camisas</h3>
+          <p>Camisa casual de algodón</p>
+          <p>Precio: $30</p>
+          <button class="boton-comprar" data-id="camisa">Comprar</button>
+        </li>
+      </ul>
+    </section>
+    <section id="carrito">
+      <h2>Carrito de Compras</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio unitario</th>
+            <th>Precio total</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-carrito">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total:</td>
+            <td id="total-carrito">$0</td>
+          </tr>
+        </tfoot>
+      </table>
+      <div id="acciones-carrito">
+        <button id="boton-vaciar">Vaciar carrito</button>
+        <button id="boton-comprar">Comprar</button>
+      </div>
+    </section>
+  </main>
+  <script src="../JS/carritoF.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>

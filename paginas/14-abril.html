@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href = "../ccs/efectos(14Abril).css" rel="stylesheet">    
+    <title>Ejemplo de API IndexedDB</title>
+</head>
+<body>
+    <h1>Ejemplo de API IndexedDB</h1>
+
+    <button onclick="crearBd()">Crear Base de Datos</button>
+    <button onclick="leerDatos()">Leer Datos</button>
+    <button onclick="leerPorEdad()">Buscar por Edad</button>
+    <form>
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre\"><br>
+      <label for="edad">Edad:</label><br>
+      <input type="number" id="edad" name="edad\"><br><br>
+      <button type="button" onclick="agregarDatos()">Agregar Datos</button>
+    </form>
+
+    <script>
+      var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+      var request;
+      if (!indexedDB) {
+        console.log("Tu navegador no soporta la API de IndexedDB.");
+      } else {
+        // Abrir la base de datos
+        request = indexedDB.open("mi_bd", 1);
+
+        request.onerror = function(event) {
+          console.log("Error al abrir la base de datos");
+        };
+
+        request.onupgradeneeded = function(event) {
+          var db = event.target.result;
+          var objectStore = db.createObjectStore("personas", { keyPath: "id" });
+          objectStore.createIndex("nombre", "nombre", { unique: false });
+          objectStore.createIndex("edad", "edad", { unique: false });
+          console.log("Base de datos creada");
+        };
+      }
+
+      function crearBd() {
+        // Esta función está aquí solo para activar el evento onupgradeneeded y crear la base de datos
+      }
+
+      function agregarDatos() {
+        if (!request) {
+          console.log("La base de datos no está abierta.");
+          return;
+        }
+
+        var db = request.result;
+        var transaction = db.transaction(["personas"], "readwrite");
+        var objectStore = transaction.objectStore("personas");
+
+        var nombre = document.getElementById("nombre").value;
+        var edad = document.getElementById("edad").value;
+
+        var persona = { id: new Date().getTime(), nombre: nombre, edad: edad };
+        var addRequest = objectStore.add(persona);
+        addRequest.onsuccess = function(event) {
+          console.log("Datos agregados correctamente");
+          document.getElementById("nombre").value = "";
+          document.getElementById("edad").value = "";
+        };
+        addRequest.onerror = function(event) {
+          console.log("Error al agregar los datos");
+        };
+      }
+
+      function leerDatos() {
+        if (!request) {
+          console.log("La base de datos no está abierta.");
+          return;
+        }
+
+        var db = request.result;
+        var transaction = db.transaction(["personas"]);
+        var objectStore = transaction.objectStore("personas");
+        var index = objectStore.index("nombre");
+
+        // Limpiar la pantalla antes de mostrar los datos
+        var datosDiv = document.getElementById("datos");
+        while (datosDiv.firstChild) {
+          datosDiv.removeChild(datosDiv.firstChild);
+        }
+
+        index.openCursor().onsuccess = function(event) {
+          var cursor = event.target.result;
+          var datosDiv = document.getElementById("datos");
+          if (cursor) {
+            var personaDiv = document.createElement("div");
+            personaDiv.innerHTML = cursor.value.nombre + ", " + cursor.value.edad;
+            datosDiv.appendChild(personaDiv);
+            cursor.continue();
+          }
+        };
+      }
+      
+      function leerPorEdad() {
+        if (!request) {
+          console.log("La base de datos no está abierta.");
+          return;
+        }
+        var db = request.result;
+        var transaction = db.transaction(["personas"]);
+        var objectStore = transaction.objectStore("personas");         
+        var index = objectStore.index("edad");
+        var edad = prompt("Introduzca la edad a buscar:");
+        // Limpiar la pantalla antes de mostrar los datos
+        var datosDiv = document.getElementById("datos");
+        while (datosDiv.firstChild) {
+          datosDiv.removeChild(datosDiv.firstChild);
+        }
+        var range = IDBKeyRange.only(parseInt(edad));
+        index.openCursor(range).onsuccess = function(event) {
+          var cursor = event.target.result;
+          var datosDiv = document.getElementById("datos");
+          if (cursor) {
+            var personaDiv = document.createElement("div");
+            personaDiv.innerHTML = cursor.value.nombre + ", " + cursor.value.edad;
+            datosDiv.appendChild(personaDiv);
+            cursor.continue();
+          }
+        };
+      }
+    </script>
+
+    <div id="datos"></div>
+
+</body>
+</html>
+
