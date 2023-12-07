@@ -1,36 +1,234 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../ccs/estilosProyecto1.css">
-    <title>GOW</title>
-    <link rel="icon" type="image/png" href="../img/icono-proyecto.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doginder</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/03faf9704e.js" crossorigin="anonymous"></script>
+
+  <!-- Font Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="../ProyectoTinder/css/sytles.css">
+
 </head>
-<body class="bodyMain">
-    
-    <section>
-        <div class = "container">
-            <div class = "card">
-                <div class = "content">
-                    <h2>saga griega</h2>
-                    <p>Kratos, guerrero espartano, busca venganza contra los dioses del Olimpo por la muerte de su familia. Tras superar desafíos y sacrificios, se convierte en el dios de la guerra.</p>
-                    <li><a href="../paginas/griega.html">ELEGIR</a></li>
-                    <li><a href="../paginas/CarritoGriego.html">COMPRAR</a></li>
-                </div>
-                <img src="../img/kratos.png">
-            </div>
-            <div class = "card">
-                <div class = "content">
-                    <h2>saga nórdica</h2>
-                    <p>Kratos y su hijo Atreus viajan por las tierras nórdicas en busca de esparcir las cenizas de la madre de Atreus. En su camino enfrentan a dioses y descubren secretos que cambiarán sus vidas.</p>
-                    <li><a href="../paginas/nordica.html">ELEGIR</a></li>
-                    <li><a href="../paginas/CarritoNórdico.html">COMPRAR</a></li>
-                </div>
-                <img src="../img/kratos-nórdico.png">
-            </div>
+
+
+<body>
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" href="">Doginder</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../ProyectoTinder/index2.html">Demo</a>
+           </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="../ProyectoTinder/index3.html">Chat</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#pricing">Pricing </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#cta">Download </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#testimonials">Reviews </a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="#footer">Contact Us </a>
+              </li>
+          </ul>
+      </div>
+
+  </nav>
+
+    <!-- Title -->
+
+    <div class="row">
+
+      <div class="col-lg-6">
+        <h1 class="big-heading">Conoce perros nuevos e interesantes cerca.</h1>
+        <button type="button" class="btn btn-dark btn-lg download-button"><i class="fa-brands fa-apple"></i> Download</button>
+        <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-brands fa-google-play"></i> Download</button>
+      </div>
+
+      <div class="col-lg-6">
+        <img class="tittle-img" src="images/iphone6.png" alt="iphone-mockup">
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+
+
+  <!-- Features -->
+  <section class="white-section" id="features">
+
+    <div class="row">
+
+      <div class="col-lg-4 feature-box">
+        <i class="icon fa-solid fa-circle-check fa-5x"></i>
+        <h3>Uso fácil.</h3>
+        <p>Es muy facil de usar que hasta tu perro podría hacerlo.</p>
+      </div>
+
+      <div class="col-lg-4 feature-box">
+        <i class="icon fa-solid fa-paw fa-5x"></i>
+        <h3>Clientes élites</h3>
+        <p>Gran variedad de perros.</p>
+      </div>
+
+      <div class="col-lg-4 feature-box">
+        <i class="icon fa-solid fa-shield-dog fa-5x"></i>
+        <h3>Garantizada para tu mascota.</h3>
+        <p>Encuentra el amor de la vida de tu perro o te devolvemos tu dinero.</p>
+      </div>
+
+    </div>
+     
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section class="colored-section" id="testimonials">
+    <div id="testimonials-carousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <h2 class="testimonials-text">Ya no tengo que olfatear a otros perros por amor. Gracias a Doginder. Wof!.</h2>
+          <img class="testimonials-img" src="images/dog-img.jpg" alt="dog-profile">
+          <em>Moca, Quito - Ecuador</em>
         </div>
-    </section>
+
+        <div class="carousel-item">
+          <h2 class="testimonials-text">Mi perro solía sentirse muy solo, pero con la ayuda de Doginder, econtró el amor de su vida.</h2>
+          <img class="testimonials-img" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Daniela, Ecuador</em>
+      
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonials-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Press -->
+
+
+
+  <!-- Pricing -->
+
+  <section class="white-section" id="pricing">
+
+    <h2 class="section-heading">Un plan para las necesidades de cada perro</h2>
+    <p>Planes de precios sencillos y asequibles para ti y tu perro.</p>
+
+    <div class="row">
+
+      <div class="pricing-col col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Chihuahua</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Free</h2>
+            <p>5 Matches por día</p>
+            <p>10 Mensajes por día</p>
+            <p>Uso de la App ilimitado</p>
+            <button class="btn btn-lg btn-outline-dark col-12">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pricing-col col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Labrador</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$25 / mo</h2>
+            <p>Matches ilimitados</p>
+            <p>Mensajes ilimitados</p>
+            <p>Uso de la App ilimitado</p>
+            <button class="btn btn-lg btn-dark col-12">Sign Up</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="pricing-col col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>Mastiff</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$50 / mo</h2>
+            <p>Listado de prioridades</p>
+            <p>Matches ilimitados</p>
+            <p>Mensajes ilimitados</p>
+            <p>Uso de la App ilimitado</p>
+            <button class="btn btn-lg btn-dark col-12">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>  
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta">
+    <div class="cta-container">
+      <h3 class="big-heading">Encuentre hoy el verdadero amor de la vida de su perro</h3>
+      <button type="button" class="btn btn-lg btn-dark download-button"><i class="fa-brands fa-apple"></i> Download</button>
+      <button type="button" class="btn btn-lg btn-light download-button"><i class="fa-brands fa-google-play"></i> Download</button>
+    </div>  
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <i class="fa-brands fa-instagram fa-md footer-icon"></i> 
+    <i class="fa-brands fa-twitter fa-md footer-icon"></i> 
+    <i class="fa-brands fa-square-facebook fa-md footer-icon"></i>
+    <i class="fa-solid fa-envelope fa-md footer-icon"></i>
+    <p>© Copyright Doginder</p>
+
+  </footer>
+
+
 </body>
+
 </html>
